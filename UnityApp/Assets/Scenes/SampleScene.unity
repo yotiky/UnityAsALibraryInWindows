@@ -314,7 +314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &2032157254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -398,9 +398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2071651333}
-  - component: {fileID: 2071651334}
   - component: {fileID: 2071651335}
-  - component: {fileID: 2071651336}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -422,20 +420,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2071651334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071651332}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e4c211009bd49a45ae05c44dbe61b88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerObject: {fileID: 2032157253}
-  rotateSpeed: 2
 --- !u!114 &2071651335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,19 +436,3 @@ MonoBehaviour:
   rotationSpeed: {x: 0.1, y: 0.2}
   zoomSpeed: 0
   reverse: 0
---- !u!114 &2071651336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071651332}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf47aebcd67e81946a9ea48de90dfc30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerObject: {fileID: 2032157253}
-  rotationSpeed: {x: 0.1, y: 0.15}
-  zoomSpeed: 0.1
-  reverse: 1
