@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="..\..\UnityAppUsingMagicOnion\Assets\Scripts\Shared\*.cs" LinkBase="LinkFromUnity" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="MagicOnion" Version="3.0.13" />
+	  <PackageReference Include="MessagePack.UnityShims" Version="2.1.152" />
+	</ItemGroup>
+
+	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+	  <Exec Command="cd $(SolutionDir)\..&#xD;&#xA;if EXIST &quot;$(TargetDir)UnityApp\&quot; (rd /S /Q &quot;$(TargetDir)UnityApp\&quot;)&#xD;&#xA;xcopy UnityAppUsingMagicOnion\App $(TargetDir)UnityApp /D/E/C/I/H/Y" />
+	</Target>
+</Project>

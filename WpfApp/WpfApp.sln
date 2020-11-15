@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp", "WpfApp\WpfApp.csproj", "{CCC97715-7673-4511-BC88-1B022C8E05BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{77431644-5530-495F-BD8F-6BB7FD47527E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{E5D0EB5A-4DEE-4AC2-A1CD-9D8A1BDB7DB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfAppWithServer", "WpfAppWithServer\WpfAppWithServer.csproj", "{CE27C407-6ED8-452E-B5E2-92A99CFE5604}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebGLOnWPF", "WebGLOnWPF\WebGLOnWPF.csproj", "{E537603E-4493-4B5B-AE03-2C60AA99E87D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfAppUsingMagicOnion", "WpfAppUsingMagicOnion\WpfAppUsingMagicOnion.csproj", "{E785BA1E-BA93-42C2-9126-A5E1897D868B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp", "WpfApp\WpfApp.csproj", "{27AD0988-362D-4DFF-A83E-001250B25B70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CCC97715-7673-4511-BC88-1B022C8E05BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CCC97715-7673-4511-BC88-1B022C8E05BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CCC97715-7673-4511-BC88-1B022C8E05BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CCC97715-7673-4511-BC88-1B022C8E05BA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E5D0EB5A-4DEE-4AC2-A1CD-9D8A1BDB7DB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E5D0EB5A-4DEE-4AC2-A1CD-9D8A1BDB7DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E5D0EB5A-4DEE-4AC2-A1CD-9D8A1BDB7DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E5D0EB5A-4DEE-4AC2-A1CD-9D8A1BDB7DB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77431644-5530-495F-BD8F-6BB7FD47527E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77431644-5530-495F-BD8F-6BB7FD47527E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77431644-5530-495F-BD8F-6BB7FD47527E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77431644-5530-495F-BD8F-6BB7FD47527E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE27C407-6ED8-452E-B5E2-92A99CFE5604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE27C407-6ED8-452E-B5E2-92A99CFE5604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE27C407-6ED8-452E-B5E2-92A99CFE5604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE27C407-6ED8-452E-B5E2-92A99CFE5604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E537603E-4493-4B5B-AE03-2C60AA99E87D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E537603E-4493-4B5B-AE03-2C60AA99E87D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E537603E-4493-4B5B-AE03-2C60AA99E87D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E537603E-4493-4B5B-AE03-2C60AA99E87D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E785BA1E-BA93-42C2-9126-A5E1897D868B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E785BA1E-BA93-42C2-9126-A5E1897D868B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E785BA1E-BA93-42C2-9126-A5E1897D868B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E785BA1E-BA93-42C2-9126-A5E1897D868B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27AD0988-362D-4DFF-A83E-001250B25B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27AD0988-362D-4DFF-A83E-001250B25B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27AD0988-362D-4DFF-A83E-001250B25B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27AD0988-362D-4DFF-A83E-001250B25B70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
