@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="cd $(SolutionDir)\..&#xD;&#xA;if EXIST &quot;$(TargetDir)UnityApp\&quot; (rd /S /Q &quot;$(TargetDir)UnityApp\&quot;)&#xD;&#xA;xcopy UnityApp\App $(TargetDir)UnityApp /D/E/C/I/H/Y" />
+  </Target>
+
 </Project>

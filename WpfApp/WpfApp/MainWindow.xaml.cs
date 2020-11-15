@@ -37,7 +37,7 @@ namespace WpfApp
             {
                 grid.Children.Add(new UnityHost
                 {
-                    AppPath = @"C:\git\yotiky\Sample.UnityAppInWPF\UnityApp\App\UnityApp.exe"
+                    AppPath = @"UnityApp\UnityApp.exe"
                 });
             }
         }
