@@ -1,1 +1,1 @@
-# Sample.UnityAppInWPF
+# Unity as a library in Windows
