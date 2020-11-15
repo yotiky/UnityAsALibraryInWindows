@@ -22,7 +22,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using UnityEngine;
 
-namespace WpfApp
+namespace WpfAppUsingMagicOnion
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

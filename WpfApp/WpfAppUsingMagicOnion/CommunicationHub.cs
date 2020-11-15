@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace WpfApp
+namespace WpfAppUsingMagicOnion
 {
     public class CommunicationHub : ISampleHubReceiver
     {

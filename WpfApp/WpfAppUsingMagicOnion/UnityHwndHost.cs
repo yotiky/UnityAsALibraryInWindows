@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Interop;
 
-namespace WpfApp
+namespace WpfAppUsingMagicOnion
 {
     public class UnityHwndHost : HwndHost
     {

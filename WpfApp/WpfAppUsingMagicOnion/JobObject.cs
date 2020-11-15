@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace WpfApp
+namespace WpfAppUsingMagicOnion
 {
 
     public class JobObject : IDisposable
