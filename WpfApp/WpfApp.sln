@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfAppUsingMagicOnion", "Wp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp", "WpfApp\WpfApp.csproj", "{27AD0988-362D-4DFF-A83E-001250B25B70}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfAppUsingNamedPipe", "WpfAppUsingNamedPipe\WpfAppUsingNamedPipe.csproj", "{FCD699A3-3D2E-4585-BB68-F1536B0B9E0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{27AD0988-362D-4DFF-A83E-001250B25B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27AD0988-362D-4DFF-A83E-001250B25B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27AD0988-362D-4DFF-A83E-001250B25B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCD699A3-3D2E-4585-BB68-F1536B0B9E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCD699A3-3D2E-4585-BB68-F1536B0B9E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCD699A3-3D2E-4585-BB68-F1536B0B9E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCD699A3-3D2E-4585-BB68-F1536B0B9E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
