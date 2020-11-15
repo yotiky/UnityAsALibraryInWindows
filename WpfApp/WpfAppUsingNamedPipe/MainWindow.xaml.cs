@@ -28,7 +28,8 @@ namespace WpfAppUsingNamedPipe
     public partial class MainWindow : Window
     {
         private UnityHwndHost host;
-        private ProcessPipelineServer pipeline;
+        private ProcessPipelineServer pipelineServer;
+        private ProcessPipelineClient pipelineClient;
         private const string myName = "MainWindow";
 
         public MainWindow()
@@ -46,8 +47,8 @@ namespace WpfAppUsingNamedPipe
                 grid.Children.Add(host);
             }
 
-            pipeline = new ProcessPipelineServer();
-            await pipeline.ConnectionAsync();
+            pipelineServer = new ProcessPipelineServer();
+            await pipelineServer.ConnectionAsync();
 
             var msg = new Letter
             {
@@ -56,23 +57,16 @@ namespace WpfAppUsingNamedPipe
             };
             await SendMessage(msg);
 
-            //hub.OnMovePositionCallback = (position, rotation, name) =>
-            //{
-            //    textPosition.Text = $"{name}\r\n" +
-            //    $"Position\r\n" +
-            //    $" x:{position.x}\r\n" +
-            //    $" y:{position.y}\r\n" +
-            //    $" z:{position.z}\r\n" +
-            //    $"Rotation\r\n" +
-            //    $" x:{rotation.x}\r\n" +
-            //    $" y:{rotation.y}\r\n" +
-            //    $" z:{rotation.z}\r\n" +
-            //    $" w:{rotation.w}";
-            //};
-            //hub.OnSendMessageCallback = (name, msg) =>
-            //{
-            //    textMessage.Text += $"{name} : {msg}\r\n";
-            //};
+            pipelineClient = new ProcessPipelineClient();
+            pipelineClient.OnReceived += body =>
+            {
+                var deserialized = MessagePackSerializer.Deserialize<IMessageBody>(body);
+                if (deserialized is Letter letter)
+                {
+                    this.Dispatcher.Invoke(() => textMessage.Text += $"{letter.Name} : {letter.Message}\r\n");
+                }
+            };
+            await pipelineClient.ConnectionAsync();
         }
 
         private async void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -105,7 +99,7 @@ namespace WpfAppUsingNamedPipe
             isCalledQuit = true;
 
             host.Destroy();
-            pipeline?.Dispose();
+            pipelineServer?.Dispose();
 
             isCleanuped = true;
 
@@ -115,7 +109,7 @@ namespace WpfAppUsingNamedPipe
         private async Task SendMessage(IMessageBody msg)
         {
             var serialized = MessagePackSerializer.Serialize<IMessageBody>(msg);
-            await pipeline.Write(serialized);
+            await pipelineServer.Write(serialized);
         }
     }
 }

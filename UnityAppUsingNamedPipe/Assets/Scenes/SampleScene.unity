@@ -604,6 +604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2071651333}
   - component: {fileID: 2071651335}
+  - component: {fileID: 2071651336}
   - component: {fileID: 2071651334}
   - component: {fileID: 2071651338}
   m_Layer: 0
@@ -641,7 +642,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1e69f23c9272444b3849bbae2816a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pipeline: {fileID: 2071651335}
+  pipelineClient: {fileID: 2071651335}
+  pipelineServer: {fileID: 2071651336}
   rotator: {fileID: 2071651338}
   tmp: {fileID: 1702520832}
 --- !u!114 &2071651335
@@ -654,6 +656,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 68288ac4d45e12849a4b7cce355a936d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2071651336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071651332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f0241f7f1a65f3478ae131b04c23c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2071651338

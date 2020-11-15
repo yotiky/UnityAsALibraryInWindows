@@ -9,12 +9,13 @@ using UnityEngine;
 
 public class MessageReceiver : MonoBehaviour
 {
-    public ProcessPipelineClient pipeline;
+    public ProcessPipelineClient pipelineClient;
+    public ProcessPipelineServer pipelineServer;
     public ObjectRotator rotator;
     public TextMeshPro tmp;
     private Channel<IMessageBody> channel;
 
-    void Start()
+    async void Start()
     {
         tmp.text = "";
 
@@ -22,13 +23,22 @@ public class MessageReceiver : MonoBehaviour
 
         RunConsumerAsync().Forget();
 
-        pipeline.OnReceived
+        pipelineClient.OnReceived
             .Subscribe(x =>
             {
                 var deserialized = MessagePackSerializer.Deserialize<IMessageBody>(x);
                 channel.Writer.TryWrite(deserialized);
             })
             .AddTo(this);
+
+        await pipelineServer.ConnectionAsync();
+        var msg = new Letter
+        {
+            Name = "Unity",
+            Message = "Hello outside world.",
+        };
+        var serialized = MessagePackSerializer.Serialize<IMessageBody>(msg);
+        await pipelineServer.Write(serialized);
     }
 
     private async UniTaskVoid RunConsumerAsync()
